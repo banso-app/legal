@@ -1,33 +1,33 @@
 :root {
-  --paper: #f7f8f5;
-  --surface: #ffffff;
-  --ink: #1d2320;
-  --muted: #5b6660;
-  --rule: #d9ded8;
-  --accent: #2c6a5b;
+  --paper: #FAFAF7;
+  --surface: #FFFFFF;
+  --ink: #1A1D1A;
+  --muted: rgba(26, 29, 26, 0.62);
+  --rule: rgba(26, 29, 26, 0.14);
+  --accent: #E8590C;
   --todo-bg: #fff1c2;
   --todo-ink: #6b4b00;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #141816;
-    --surface: #1b201d;
-    --ink: #e6ebe7;
-    --muted: #a0aba4;
-    --rule: #2f3632;
-    --accent: #7cc3ae;
+    --paper: #131311;
+    --surface: #1E1E1B;
+    --ink: #F2F2EC;
+    --muted: rgba(242, 242, 236, 0.62);
+    --rule: rgba(242, 242, 236, 0.14);
+    --accent: #FF6B1A;
     --todo-bg: #4a3a0c;
     --todo-ink: #ffe29a;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #141816;
-  --surface: #1b201d;
-  --ink: #e6ebe7;
-  --muted: #a0aba4;
-  --rule: #2f3632;
-  --accent: #7cc3ae;
+  --paper: #131311;
+  --surface: #1E1E1B;
+  --ink: #F2F2EC;
+  --muted: rgba(242, 242, 236, 0.62);
+  --rule: rgba(242, 242, 236, 0.14);
+  --accent: #FF6B1A;
   --todo-bg: #4a3a0c;
   --todo-ink: #ffe29a;
   color-scheme: dark;
@@ -38,7 +38,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "BIZ UDPGothic", "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   font-size: 16px;
   line-height: 1.9;
   padding-inline: 20px;
@@ -46,18 +46,18 @@ body {
 .page { max-width: 42rem; margin-inline: auto; padding-block: 40px 72px; }
 
 .masthead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
-.brand { font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; letter-spacing: 0.04em; }
+.brand { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; letter-spacing: 0.04em; }
 .masthead nav { display: flex; gap: 20px; font-size: 0.9rem; }
 .masthead nav a { color: var(--muted); text-decoration: none; }
 .masthead nav a[aria-current="page"] { color: var(--accent); font-weight: 700; }
 .masthead nav a:hover, .masthead nav a:focus-visible { color: var(--accent); }
 
-h1 { font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif; font-size: 1.9rem; line-height: 1.4; margin: 40px 0 8px; text-wrap: balance; }
+h1 { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; font-size: 1.9rem; line-height: 1.4; margin: 40px 0 8px; text-wrap: balance; }
 .dates { color: var(--muted); font-size: 0.85rem; margin: 0 0 24px; font-variant-numeric: tabular-nums; }
 .lead { margin: 0 0 32px; }
 
 section { padding-block: 20px; border-top: 1px solid var(--rule); }
-h2 { font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif; font-size: 1.15rem; line-height: 1.5; margin: 0 0 8px; display: flex; gap: 12px; text-wrap: balance; }
+h2 { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; font-size: 1.15rem; line-height: 1.5; margin: 0 0 8px; display: flex; gap: 12px; text-wrap: balance; }
 h2 .no { color: var(--accent); flex: none; font-variant-numeric: tabular-nums; }
 p { margin: 0 0 12px; }
 ol, ul { margin: 0 0 12px; padding-left: 1.5em; }
@@ -69,13 +69,13 @@ th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-botto
 th { font-weight: 700; color: var(--muted); font-size: 0.82rem; letter-spacing: 0.04em; white-space: nowrap; }
 td:first-child { white-space: nowrap; font-weight: 700; }
 
-a { color: var(--accent); }
+main a, footer a { color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 .todo { background: var(--todo-bg); color: var(--todo-ink); padding: 0 4px; border-radius: 3px; font-weight: 700; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 12px; margin: 24px 0; }
-.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 16px 18px; color: var(--ink); text-decoration: none; display: flex; flex-direction: column; gap: 4px; }
-.card strong { font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif; color: var(--accent); }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 16px; padding: 16px 18px; color: var(--ink); text-decoration: none; display: flex; flex-direction: column; gap: 4px; }
+.card strong { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; color: var(--accent); }
 .card span { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
 .card:hover, .card:focus-visible { border-color: var(--accent); }
 
